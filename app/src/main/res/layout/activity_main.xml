@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
+    android:orientation="vertical">
+
+
+    <SeekBar
+        android:id="@+id/sb_scale"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:max="100"
+        android:progress="10" />
+
+    <SeekBar
+        android:id="@+id/sb_angle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:max="100"
+        android:progress="10" />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.adjustable.library.IndicatorView
+            android:id="@+id/indicator_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            app:angle="40"
+            app:each_padding="30dp"
+            app:filled_color="#faaab9"
+            app:line_width="2dp"
+            app:mode="select"
+            app:scale="0.6"
+            app:size="20dp"
+            app:stroke_color="#fff" />
+
+        <com.adjustable.library.IndicatorView
+            android:id="@+id/indicator_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="80dp"
+            app:angle="40"
+            app:each_padding="30dp"
+            app:filled_color="#1aaab9"
+            app:line_width="2dp"
+            app:mode="progress"
+            app:scale="0.6"
+            app:size="20dp"
+            app:stroke_color="#fff" />
+    </FrameLayout>
+
+</LinearLayout>
